@@ -1,0 +1,135 @@
+insert into emp
+    values('Aradhaya',NULL, 'Bahuguna',729126290,'2022/05/19','India','F',53000,NULL,270),
+     ('Uttkarsh',NULL,'Sharma',295394116,'2021/12/09','India','M',29000,NULL,270),
+     ('Kartik','K.',' Sharma',178595377,'2022/01/01','India','M',35000,NULL,270),
+     ('Basile','Thomas','Keford',866092846,'2022/03/22','United States','M',75000,NULL,269),
+     ('Annabelle','Bella','Hauger',239689902,'2022/05/13','Japan','F',50000,NULL,269),
+     ('Web','Di', 'Dello',434495579,'2022/03/19','France','M',26000,NULL,269),
+     ('Lucienne','Aureli','Golthorpp',299326854,'2021/12/28','China','F',35000,NULL,269),
+     ('Aditi','Rao', 'Kapoor',868400909,'2021/12/18','India','F',70000,NULL,269),
+     ('Ricky','James','Desouza',708104944,'2022/02/14','India','M',69000,NULL,246),
+     ('Rozina','Ruth','Pallas',137160843,'2022/05/20','India','F',36000,NULL,246),
+     ('Joelly',NULL,'Challen',595440132,'2022/07/12','Czech Republic','F',42000,NULL,246),
+     ('Waldon','Alfred','Cesco',200047546,'2022/05/19','United States','M',35000,NULL,246),
+     ('Felic',NULL,'Smythin',452172617,'2021/04/05','Japan','M',12000,NULL,246),
+     ('Teena',NULL,'Misra',689861038,'2022/03/22','India','F',75000,NULL,276),
+     ('Sheree','Hella','Packman',124984407,'2021/02/16','Poland','F',68000,NULL,276),
+     ('Alford','Noble','Panting',510338677,'2022/03/27','Chile','M',53000,NULL,276),
+     ('Findlay','Ali','Hazlewood',870880302,'2022/01/09','Japan','M',56000,NULL,276),
+     ('Tony','Stark','Gligoraci',462722558,'2022/01/13','Russia','M',35000,NULL,276),
+     ('Ruthe','Shree','Savage',838178932,'2022/06/04','Japan','F',13000,NULL,236),
+     ('Alejoa','Joe','Cammacke',205898684,'2021/09/21','Poland','M',25000,NULL,236),
+     ('Teresa',NULL,'Padmore',213804562,'2022/07/20','India','F',36000,NULL,236),
+     ('Anirudh',NULL,'Ravichandra',824080074,'2021/11/09','India','M',53000,NULL,236),
+     ('Tyler','Shaw','Cholerton',488961711,'2021/11/07','China','M',63000,NULL,236),
+     ('Vivienne','Duarte','Hebblethwaite',370634576,'2021/10/26','Elfhame','F',75000,NULL,270),
+     ('Ryann','Kin','Kem',221012269,'2022/05/09','Sweden','F',25000,NULL,270),
+     ( 'Rose','Lucas','Scandrite',21441882,'2022/03/28','Poland','F',70000,NULL,00239),
+     ('Abey','W.','Bompas',742598285,'2022/03/09','Colombia','M',45000,NULL,00239),
+     ( 'Stefano',NULL,'Woolfall',822329734,'2022/08/25','Brazil','M',29000,NULL,00239),
+     ('Bobbie','M.','Anderl',564341211,'2021/11/27','Japan','M',39000,NULL,00239),
+     ( 'Nicolas','High','Hawkeridge',697580514,'2022/06/29','Malaysia','M','25000',NULL,00239);
+
+
+insert into dept
+    -> values('CSE',236,NULL,NULL),
+    -> ('IT',276,NULL,NULL),
+    -> ('CIVIL',239,NULL,NULL),
+    -> ('ECE',246,NULL,NULL),
+    -> ('BT',269,NULL,NULL),
+    -> ('BI',270,NULL,NULL);
+
+
+update emp
+    set Ssn=211441882 where Fname='Rose'
+    set Super_ssn=211441882 where D_dno=239
+    set Super_ssn = 370634576 where D_dno = 270
+    set Super_ssn = 866092846 where D_dno = 269
+    set Super_ssn = 708104944 where D_dno = 246
+    set Super_ssn = 689861038 where D_dno = 276
+    set Super_ssn = 488961711 where D_dno = 236
+
+
+create table Dept_loc(
+     Dep_no int,
+     Dlocation varchar(30),
+     primary key(Dep_no,Dlocation),
+     foreign key(Dep_no) references dept(Dno) on update cascade on delete cascade);
+
+
+create table Project(
+     Pname varchar(15),
+     Pno int,
+     Plocation varchar(15),
+     Dep_no int,
+     primary key(Pno),
+     foreign key(Dep_no) references dept(Dno) on update cascade on delete cascade);
+
+
+create table dependent(
+     Essn int,
+     Dep_name varchar(30),
+     Sex enum('M','F'),
+     B_date date,
+     Relationship varchar(15),
+     primary key(Essn,Dep_name),
+     foreign key (Essn) references emp(Ssn) on update cascade on delete cascade);
+
+
+create table Work_on(
+     Essn int,
+     P_no int,
+     Hours int,
+     foreign key (Essn) references emp(Ssn) on update cascade on delete cascade,
+     foreign key (P_no) references project(Pno) on update cascade on delete cascade);
+
+
+ update dept
+     set Mgr_start_date='2022/03/16' where Dno=236;
+ update dept
+     set Mgr_start_date='2022/01/06' where Dno=239;
+ update dept
+     set Mgr_start_date='2021/02/28' where Dno=246;
+ update dept
+     set Mgr_start_date='2021/12/29' where Dno=269;
+ update dept
+     set Mgr_start_date='2021/05/29' where Dno=270;
+ update dept
+     set Mgr_start_date='2021/10/19' where Dno=276;
+
+
+insert into dept_loc values
+     (236,'First Floor acads'),
+     (239,'Civil department'),
+     (246,'Second Floor acads'),
+     (269,'Second Floor acads'),
+     (270,'Second floor acads'),
+     (276,'First Floor acads');
+
+
+ insert into project values
+     ('Basics of AI',310698,'Staford',236),
+     ('The big data future',365392,'MIIT',236),
+     ('Interchange structures for better transport',345896,'Havard',239),
+     ('Basic Air travel',398632,'Utha',239),
+     ('The wireless electronic communication',325896,'Staford',246),
+     ('Better radio signal for space communication',326598,'MIIT',246),
+     ('The plant miosis theory',347896,'NYU',269),
+     ('Generating DNA',347897,'NYU',269),
+     ('Plant survival thoery',347995,'Havard',270),
+     ('Super cells coversion',347996,'Utah',270),
+     ('IoT and E-commerce',369258,'MIIT',276),
+     ('The know how of web',269259,'Utah',276);
+
+
+ insert into work_on values
+     (870880302,310698,12),
+     (870880302,269259,09),
+     (729126290,347897,03),
+     (729126290,347995,08),
+     (211441882,398632,29),
+     (211441882,345896,02),
+     (211441882,369258,01),
+     (370634576,347996,16),
+     (370634576,347995,10),
+     (370634576,347896,05);
