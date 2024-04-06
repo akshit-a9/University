@@ -60,4 +60,4 @@ int main() {
     cout<<"The pig latin of your word is: "<<ans<<endl;
 
     return 0;
-}
+} 

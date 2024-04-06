@@ -1,8 +1,8 @@
 E -> TE'
 E' -> +TE' | ε
-T -> FT'
-T' -> +FT' | ε
-F -> (E) | id
+T -> FT'  
+T' -> *FT' | ε     
+E -> (F) | id    
 
 from recursive grammar
 
