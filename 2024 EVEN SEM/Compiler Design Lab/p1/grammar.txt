@@ -3,3 +3,9 @@ E' -> +TE' | ε
 T -> FT'
 T' -> +FT' | ε
 F -> (E) | id
+
+from recursive grammar
+
+E -> E + T | T
+T -> T + F | F
+F -> (E) | id
