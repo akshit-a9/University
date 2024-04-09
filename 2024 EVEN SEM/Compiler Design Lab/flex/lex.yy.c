@@ -261,9 +261,6 @@ static void yy_flex_free YY_PROTO(( void * ));
 
 #define YY_AT_BOL() (yy_current_buffer->yy_at_bol)
 
-
-#define yywrap() 1
-#define YY_SKIP_YYWRAP
 typedef unsigned char YY_CHAR;
 FILE *yyin = (FILE *) 0, *yyout = (FILE *) 0;
 typedef int yy_state_type;
@@ -285,12 +282,12 @@ static void yy_fatal_error YY_PROTO(( yyconst char msg[] ));
 	*yy_cp = '\0'; \
 	yy_c_buf_p = yy_cp;
 
-#define YY_NUM_RULES 8
-#define YY_END_OF_BUFFER 9
-static yyconst short int yy_accept[15] =
+#define YY_NUM_RULES 12
+#define YY_END_OF_BUFFER 13
+static yyconst short int yy_accept[20] =
     {   0,
-        0,    0,    9,    7,    6,    6,    4,    5,    7,    1,
-        2,    3,    1,    0
+        0,    0,   13,   11,   10,   10,    1,    2,    8,    8,
+        8,    5,    6,    9,    3,    4,   10,    7,    0
     } ;
 
 static yyconst int yy_ec[256] =
@@ -299,16 +296,16 @@ static yyconst int yy_ec[256] =
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    2,    1,    1,    1,    1,    1,    1,    1,    4,
-        4,    1,    5,    1,    6,    1,    1,    7,    7,    7,
-        7,    7,    7,    7,    7,    7,    7,    1,    1,    1,
-        1,    1,    1,    1,    8,    8,    8,    8,    8,    8,
-        8,    8,    8,    8,    8,    8,    8,    8,    8,    8,
-        8,    8,    8,    8,    8,    8,    8,    8,    8,    8,
-        1,    1,    1,    1,    1,    1,    8,    8,    8,    8,
+        5,    6,    7,    1,    8,    1,    9,    1,    1,    1,
+        1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
+        1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
+        1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
+        1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
+       10,    1,   11,    1,    1,    1,   12,   13,   14,   15,
 
-        8,    8,    8,    8,    8,    8,    8,    8,    8,    8,
-        8,    8,    8,    8,    8,    8,    8,    8,    8,    8,
-        8,    8,    1,    1,    1,    1,    1,    1,    1,    1,
+        1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
+        1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
+        1,    1,   16,    1,   17,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
@@ -325,35 +322,40 @@ static yyconst int yy_ec[256] =
         1,    1,    1,    1,    1
     } ;
 
-static yyconst int yy_meta[9] =
+static yyconst int yy_meta[18] =
     {   0,
-        1,    1,    1,    1,    1,    1,    2,    2
+        1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
+        1,    1,    1,    1,    1,    1,    1
     } ;
 
-static yyconst short int yy_base[16] =
+static yyconst short int yy_base[20] =
     {   0,
-        0,    0,   12,   13,   13,   13,   13,    6,    4,    0,
-       13,   13,    0,   13,    7
+        0,    0,   26,   27,   16,   18,   27,   27,   27,   18,
+       16,   27,   27,   27,   27,   27,   20,   27,   27
     } ;
 
-static yyconst short int yy_def[16] =
+static yyconst short int yy_def[20] =
     {   0,
-       14,    1,   14,   14,   14,   14,   14,   14,   14,   15,
-       14,   14,   15,    0,   14
+       19,    1,   19,   19,   19,   19,   19,   19,   19,   19,
+       19,   19,   19,   19,   19,   19,   19,   19,    0
     } ;
 
-static yyconst short int yy_nxt[22] =
+static yyconst short int yy_nxt[45] =
     {   0,
-        4,    5,    6,    7,    8,    9,    4,   10,   13,   12,
-       11,   14,    3,   14,   14,   14,   14,   14,   14,   14,
-       14
+        4,    5,    6,    7,    8,    9,   10,   11,    9,   12,
+       13,   14,   14,   14,   14,   15,   16,   17,   17,   17,
+       17,   17,   17,   18,   18,   19,    3,   19,   19,   19,
+       19,   19,   19,   19,   19,   19,   19,   19,   19,   19,
+       19,   19,   19,   19
     } ;
 
-static yyconst short int yy_chk[22] =
+static yyconst short int yy_chk[45] =
     {   0,
-        1,    1,    1,    1,    1,    1,    1,    1,   15,    9,
-        8,    3,   14,   14,   14,   14,   14,   14,   14,   14,
-       14
+        1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
+        1,    1,    1,    1,    1,    1,    1,    5,    5,    6,
+        6,   17,   17,   11,   10,    3,   19,   19,   19,   19,
+       19,   19,   19,   19,   19,   19,   19,   19,   19,   19,
+       19,   19,   19,   19
     } ;
 
 static yy_state_type yy_last_accepting_state;
@@ -367,43 +369,12 @@ static char *yy_last_accepting_cpos;
 #define YY_MORE_ADJ 0
 #define YY_RESTORE_YY_MORE_OFFSET
 char *yytext;
-#line 1 "example.l"
+#line 1 "mindlex.l"
 #define INITIAL 0
-#line 2 "example.l"
+#line 2 "mindlex.l"
 #include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-
-// Structure to represent variables and their values
-typedef struct {
-    char name[20];
-    int value;
-} Variable;
-
-Variable variables[20]; // Array to store variables and their values
-int varCount = 0; // Variable count
-
-void addOrUpdateVariable(char* name, int value) {
-    for (int i = 0; i < varCount; i++) {
-        if (strcmp(variables[i].name, name) == 0) {
-            variables[i].value = value;
-            return;
-        }
-    }
-    strcpy(variables[varCount].name, name);
-    variables[varCount].value = value;
-    varCount++;
-}
-
-int getVariableValue(char* name) {
-    for (int i = 0; i < varCount; i++) {
-        if (strcmp(variables[i].name, name) == 0) {
-            return variables[i].value;
-        }
-    }
-    return 0; // Default value if variable not found
-}
-#line 407 "lex.yy.c"
+int operators_count = 0, operands_count = 0, valid = 1, depth = 0;
+#line 378 "lex.yy.c"
 
 /* Macros after this point can all be overridden by user definitions in
  * section 1.
@@ -554,10 +525,10 @@ YY_DECL
 	register char *yy_cp, *yy_bp;
 	register int yy_act;
 
-#line 39 "example.l"
+#line 6 "mindlex.l"
 
 
-#line 561 "lex.yy.c"
+#line 532 "lex.yy.c"
 
 	if ( yy_init )
 		{
@@ -608,13 +579,13 @@ yy_match:
 			while ( yy_chk[yy_base[yy_current_state] + yy_c] != yy_current_state )
 				{
 				yy_current_state = (int) yy_def[yy_current_state];
-				if ( yy_current_state >= 15 )
+				if ( yy_current_state >= 20 )
 					yy_c = yy_meta[(unsigned int) yy_c];
 				}
 			yy_current_state = yy_nxt[yy_base[yy_current_state] + (unsigned int) yy_c];
 			++yy_cp;
 			}
-		while ( yy_base[yy_current_state] != 13 );
+		while ( yy_base[yy_current_state] != 27 );
 
 yy_find_action:
 		yy_act = yy_accept[yy_current_state];
@@ -642,60 +613,68 @@ do_action:	/* This label is used only to access EOF actions. */
 
 case 1:
 YY_RULE_SETUP
-#line 41 "example.l"
-{
-                        printf("IDENTIFIER: %s\n", yytext);
-                        addOrUpdateVariable(yytext, getVariableValue(yytext) + 1); // Perform postfix increment
-                      }
+#line 8 "mindlex.l"
+{ depth++; printf("%s is an opening bracket\n", yytext); }
 	YY_BREAK
 case 2:
 YY_RULE_SETUP
-#line 45 "example.l"
-{
-                        printf("INCREMENT\n");
-                        addOrUpdateVariable(yytext - 1, getVariableValue(yytext - 1) + 1); // Perform postfix increment
-                      }
+#line 9 "mindlex.l"
+{ if(depth > 0) depth--; else valid = 0; printf("%s is a closing bracket\n", yytext); }
 	YY_BREAK
 case 3:
 YY_RULE_SETUP
-#line 49 "example.l"
-{
-                        printf("DECREMENT\n");
-                        addOrUpdateVariable(yytext - 1, getVariableValue(yytext - 1) - 1); // Perform postfix decrement
-                      }
+#line 11 "mindlex.l"
+{ depth++; printf("%s is an opening brace\n", yytext); }
 	YY_BREAK
 case 4:
 YY_RULE_SETUP
-#line 53 "example.l"
-{
-                        printf("PARENTHESIS: %c\n", yytext[0]);
-                      }
+#line 12 "mindlex.l"
+{ if(depth > 0) depth--; else valid = 0; printf("%s is a closing brace\n", yytext); }
 	YY_BREAK
 case 5:
 YY_RULE_SETUP
-#line 56 "example.l"
-{
-                        printf("ADD\n");
-                      }
+#line 14 "mindlex.l"
+{ depth++; printf("%s is an opening square bracket\n", yytext); }
 	YY_BREAK
 case 6:
 YY_RULE_SETUP
-#line 59 "example.l"
-; /* Ignore whitespace and newline */
+#line 15 "mindlex.l"
+{ if(depth > 0) depth--; else valid = 0; printf("%s is a closing square bracket\n", yytext); }
 	YY_BREAK
 case 7:
 YY_RULE_SETUP
-#line 61 "example.l"
-{
-                        printf("Invalid character: %c\n", yytext[0]);
-                      }
+#line 17 "mindlex.l"
+{ 
+    operators_count++; 
+    printf("%s is a unary operator\n", yytext);
+}
 	YY_BREAK
 case 8:
 YY_RULE_SETUP
-#line 65 "example.l"
+#line 22 "mindlex.l"
+{ operators_count++; printf("%s is a binary operator\n", yytext); }
+	YY_BREAK
+case 9:
+YY_RULE_SETUP
+#line 24 "mindlex.l"
+{ operands_count++; printf("%s is an operand\n", yytext); }
+	YY_BREAK
+case 10:
+YY_RULE_SETUP
+#line 26 "mindlex.l"
+/* Ignore whitespace. */
+	YY_BREAK
+case 11:
+YY_RULE_SETUP
+#line 28 "mindlex.l"
+{ printf("Unrecognized character: %s\n", yytext); } /* Catch-all rule */
+	YY_BREAK
+case 12:
+YY_RULE_SETUP
+#line 30 "mindlex.l"
 ECHO;
 	YY_BREAK
-#line 699 "lex.yy.c"
+#line 678 "lex.yy.c"
 case YY_STATE_EOF(INITIAL):
 	yyterminate();
 
@@ -987,7 +966,7 @@ static yy_state_type yy_get_previous_state()
 		while ( yy_chk[yy_base[yy_current_state] + yy_c] != yy_current_state )
 			{
 			yy_current_state = (int) yy_def[yy_current_state];
-			if ( yy_current_state >= 15 )
+			if ( yy_current_state >= 20 )
 				yy_c = yy_meta[(unsigned int) yy_c];
 			}
 		yy_current_state = yy_nxt[yy_base[yy_current_state] + (unsigned int) yy_c];
@@ -1022,11 +1001,11 @@ yy_state_type yy_current_state;
 	while ( yy_chk[yy_base[yy_current_state] + yy_c] != yy_current_state )
 		{
 		yy_current_state = (int) yy_def[yy_current_state];
-		if ( yy_current_state >= 15 )
+		if ( yy_current_state >= 20 )
 			yy_c = yy_meta[(unsigned int) yy_c];
 		}
 	yy_current_state = yy_nxt[yy_base[yy_current_state] + (unsigned int) yy_c];
-	yy_is_jam = (yy_current_state == 14);
+	yy_is_jam = (yy_current_state == 19);
 
 	return yy_is_jam ? 0 : yy_current_state;
 	}
@@ -1581,15 +1560,21 @@ int main()
 	return 0;
 	}
 #endif
-#line 65 "example.l"
+#line 30 "mindlex.l"
 
 
-int main() {
-    printf("Enter postfix expression: ");
+int yywrap(void) { return 1; }
+
+int main(void) {
+    printf("Enter the arithmetic expression: ");
     yylex();
-    printf("Variables after postfix operations:\n");
-    for (int i = 0; i < varCount; i++) {
-        printf("%s = %d\n", variables[i].name, variables[i].value);
+   
+    if(valid && depth == 0 && operands_count - operators_count == 1) {
+        printf("\nInvalid Expression\n");
+    } 
+    else {
+        printf("\nValid Expression\n");
     }
+
     return 0;
 }
