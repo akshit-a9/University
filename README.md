@@ -6,7 +6,6 @@ Welcome to the **University** repository! This collection contains all the probl
 - [About](#about)
 - [Folder Structure](#folder-structure)
 - [Subjects Covered](#subjects-covered)
-- [Languages and Tools](#languages-and-tools)
 - [How to Use](#how-to-use)
 - [Contributing](#contributing)
 - [License](#license)
@@ -27,39 +26,33 @@ Each semester folder contains relevant code files, experiments, and reports asso
 ## Subjects Covered
 Here is a brief overview of the subjects covered in each semester:
 
-- **2022 ODD SEM**:
-  - Introduction to Programming (Python)
-  - Data Structures (C/C++)
-  - Digital Logic Design
-
 - **2022 EVEN SEM**:
-  - Object-Oriented Programming (Java)
-  - Operating Systems
-  - Database Management Systems
+  - Data Structures (C/C++)
 
-- **2023 ODD SEM**:
-  - Design and Analysis of Algorithms
-  - Computer Networks
-  - Theory of Computation
+- **2022 ODD SEM**:
+  - Database Management Systems (MySQL)
+  - MATLAB
+  - Object Oriented Programming (C++)
+  - Python Programming Essentials
 
 - **2023 EVEN SEM**:
-  - Compiler Design
-  - Software Engineering
-  - Web Technologies
+  - Design and Analysis of Algorithms
+  - Operating Systems
+  - Data Science & Visualization
+  - Web Development
+
+- **2023 ODD SEM**:
+  - Computer Graphics (GLUT)
+  - Data Compression
+  - Multimedia
 
 - **2024 EVEN SEM**:
   - Machine Learning
-  - Artificial Intelligence
-  - Cloud Computing
+  - Competitive Programming
+  - Compiler Design
+  - Computer Networks
+  - Information Security
 
-## Languages and Tools
-This repository includes code written in various programming languages and tools:
-- **Jupyter Notebook (80.8%)**
-- **C++ (11.4%)**
-- **Python (4.6%)**
-- **C (2.9%)**
-- **Lex (0.2%)**
-- **Java (0.1%)**
 
 ## How to Use
 1. Clone the repository:
