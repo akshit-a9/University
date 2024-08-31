@@ -1,0 +1,17 @@
+switch (x) {
+    case A:
+        cout << "Kanji";
+        break;
+    case B:
+        cout << "Bhanji";
+        break;
+    case C:
+        cout << "Nanji";
+        break;
+    case D:
+        cout << "Dhonji";
+        break;
+    default:
+        cout << "Adarsh";
+        break;
+}

@@ -1,0 +1,17 @@
+switch (x) {
+    case 1:
+        cout << "One";
+        brea;
+    case 2:
+        cout << "Two";
+        break;
+    case 3:
+        cout << "Three";
+        break;
+    case 4:
+        cout << "Four";
+        break;
+    default:
+        cout << "Other";
+        break;
+}
