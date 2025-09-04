@@ -1,6 +1,6 @@
-# University
+# Undergrad
 
-Welcome to the **University** repository! This collection contains all the problem-solving exercises, experiments, and practicals completed as part of my university academics.
+Welcome to the **Undergrad** repository! This collection contains all the problem-solving exercises, experiments, and practicals completed as part of my university academics.
 
 ## Table of Contents
 - [About](#about)
